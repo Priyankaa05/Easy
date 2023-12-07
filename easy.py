@@ -1,13 +1,12 @@
 def length_of_last_word(s):
-    s = s.rstrip()
-    length = 0
-    for char in reversed(s):
-        if char == ' ':
-            break
-        length += 1
+    # Split the string into words
+    words = s.split()
 
-    return length
+    # Check if there are any words
+    if not words:
+        return 0
 
-print(length_of_last_word("Hello World")) 
-print(length_of_last_word("   fly me   to   the moon  ")) 
-print(length_of_last_word("luffy is still joyboy")) 
+    # Return the length of the last word
+    return len(words[-1])
+s=input("enter string")
+print(length_of_last_word(s))
